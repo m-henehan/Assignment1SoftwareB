@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    //testImplementation('org.junit.jupiter:junit-jupiter-engine:5.8.1')
+    testImplementation('org.junit.jupiter:junit-jupiter:5.8.1')
+    testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.8.1')
+    //testImplementation(platform("org.junit:junit-bom:5.8.1"))
+    //testRuntimeOnly("org.junit.platform:junit-platform-launcher") {
+        //because("Only needed to run tests in a version of IntelliJ IDEA that bundles older versions")
+    //}
+    implementation('joda-time:joda-time:2.11.1')
+    //implementation 'com.github.JetBrains:gradle-intellij-plugin:1.1.2'
+    implementation 'com.github.m-henehan:Assignment1Software:v1.2'
+}
+
+test {
+    useJUnitPlatform()
+}
